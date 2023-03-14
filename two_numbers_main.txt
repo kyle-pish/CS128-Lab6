@@ -1,0 +1,24 @@
+//Kyle Pish & Josh Reed
+//Date: 2/10/2022
+
+TwoNumbers my_two_numbers = TwoNumbers(7, 13);
+int guess1;
+int guess2;
+
+std::cout << "Sum: " << my_two_numbers.GetSum() << std::endl;
+std::cout << "Difference: " << my_two_numbers.GetDifference() << std::endl;
+std::cout << "Product: " << my_two_numbers.GetProduct() << std::endl;
+
+while (true) {
+  std::cout << std::endl << "Guess the numbers!" << std::endl;
+
+  std::cin >> guess1;
+  std::cin >> guess2;
+
+  if (my_two_numbers.GuessNumbers(guess1, guess2)) {
+    std::cout << std::endl << "New numbers generated!" << std::endl;
+    std::cout << "Sum: " << my_two_numbers.GetSum() << std::endl;
+    std::cout << "Difference: " << my_two_numbers.GetDifference() << std::endl;
+    std::cout << "Product: " << my_two_numbers.GetProduct() << std::endl;
+  }
+}
